@@ -1,2 +1,2 @@
 # openjenweekins
-Hello je test l'envoi d'envent
+Hello je test l'envoi d'event
