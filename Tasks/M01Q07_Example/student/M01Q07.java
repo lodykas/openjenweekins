@@ -23,9 +23,9 @@ import java.util.Random;
 import org.junit.runner.notification.Failure;
 
 public class M01Q07 {
-	
+
 	private static String str = "Le code semble comporter des erreurs : ";
-	
+
 	@Test
 	public void testPos(){
 		try{
@@ -58,11 +58,11 @@ public class M01Q07 {
 			e.printStackTrace();
 		}
 	}
-	
+
 	@Test
 	public void testNeg(){
 		try{
-			int sum = 0;
+			int sum = 0;//modification
 			for(int i = 0 ; i < 10 ; i++){
 				sum += i*2;
 				int resneg = M01Q07Stu.sumFirstEvenIntegers(-i);
@@ -91,7 +91,7 @@ public class M01Q07 {
 			e.printStackTrace();
 		}
 	}
-	
+
 	// Code verificateur
 	public static void main(String[] args) {
 		Result result = JUnitCore.runClasses(M01Q07.class);
