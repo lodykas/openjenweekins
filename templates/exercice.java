@@ -3,4 +3,5 @@ public static class exercice{
     {
         return 0;
     }
+    short pantalon;
 }
