@@ -1,5 +1,5 @@
 /**
- *  Copyright (c) 2015, 2016 François Michel, Clémentine Munyabarenzi
+ *  Copyright (c) {Annee(s)} {Auteur(s)}
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
@@ -15,14 +15,8 @@
 
 package student;
 
-public class M1Q7Stu {
+public class {exercice}Stu {
 
 	// Code a verifier
-	public static int sumFirstEvenIntegers(int n){
-		int sum = 0;
-		for(int i = 1 ; i <= n ; i++){
-			sum += i*2;
-		}
-		return sum;
-	}
+
 }

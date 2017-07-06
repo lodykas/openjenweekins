@@ -1,16 +1,18 @@
-//   Copyright (c) 2016 Doriane Olewicki, Marie-Marie van der Beek
-//   This program is free software: you can redistribute it and/or modify
-//   it under the terms of the GNU Affero General Public License as published by
-//   the Free Software Foundation, either version 3 of the License, or
-//   (at your option) any later version.
-//
-//   This program is distributed in the hope that it will be useful,
-//   but WITHOUT ANY WARRANTY; without even the implied warranty of
-//   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-//   GNU Affero General Public License for more details.
-//
-//   You should have received a copy of the GNU Affero General Public License
-//   along with this program.  If not, see <http://www.gnu.org/licenses/>.
+/**
+ *  Copyright (c) 2015, 2016 François Michel, Clémentine Munyabarenzi
+ *  This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU Affero General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU Affero General Public License for more details.
+ *
+ *  You should have received a copy of the GNU Affero General Public License
+ *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 
 package student;
 import static org.junit.Assert.*;
@@ -20,21 +22,20 @@ import org.junit.Test;
 import java.util.Random;
 import org.junit.runner.notification.Failure;
 
-public class M6Q1 {
+public class M01Q07 {
 	
 	private static String str = "Le code semble comporter des erreurs : ";
 	
-    @Test
-	public void test1(){
+	@Test
+	public void testPos(){
 		try{
-				String nameInit = "Bob" + (int)(Math.random() *10);
-               String nameEnd  = "Jack" + (int)(Math.random() *10);
-               
-               M6Q1Stu a = new M6Q1Stu(nameInit);
-               a.setName(nameEnd);
-
-				assertEquals("Question 1 : La fonction set n'est pas correcte ", nameEnd, a.getNameAdm());
-			
+			int sum = 0;
+			for(int i = 0 ; i < 100 ; i++){
+				sum += i*2;
+				int res = M01Q07Stu.sumFirstEvenIntegers(i);
+				assertEquals(str + "pour les "+i+" premiers entiers pairs, la somme devrait donner "+sum+" mais le résultat obtenu est "+res+".",
+																												 				  sum, res);
+			}
 		}catch (ArithmeticException e){
 			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
 			e.printStackTrace();
@@ -58,17 +59,18 @@ public class M6Q1 {
 		}
 	}
 	
-    @Test
-	public void test2(){
+	@Test
+	public void testNeg(){
 		try{
-				String nameInit = "Bob" + (int)(Math.random() *10);
-               M6Q1Stu a = new M6Q1Stu(nameInit);
-
-
-				assertEquals("Question 2 : La fonction get n'est pas correcte ", nameInit, a.getName());
-			
+			int sum = 0;
+			for(int i = 0 ; i < 10 ; i++){
+				sum += i*2;
+				int resneg = M01Q07Stu.sumFirstEvenIntegers(-i);
+				assertEquals(str + "pour un n négatif, le résultat retourné devrait être zéro, or, le résultat obtenu est "
+						 + resneg + ".", 0, resneg);
+			}
 		}catch (ArithmeticException e){
-			fail(str + "Le code est incorrect : il est interdit de diviser par zéro.");
+			fail(str + "il est interdit de diviser par zéro.");
 			e.printStackTrace();
 		}catch(ClassCastException e){
 			fail(str + "Attention, certaines variables ont été mal castées	!");
@@ -89,10 +91,10 @@ public class M6Q1 {
 			e.printStackTrace();
 		}
 	}
-    
+	
 	// Code verificateur
 	public static void main(String[] args) {
-		Result result = JUnitCore.runClasses(M6Q1.class);
+		Result result = JUnitCore.runClasses(M01Q07.class);
 		for (Failure failure: result.getFailures()) {
 			System.err.println(failure.toString());
 		}
@@ -102,4 +104,3 @@ public class M6Q1 {
 		}
 	}
 }
-
