@@ -1,5 +1,5 @@
 /**
- *  Copyright (c)  2016 Ody Lucas, Rousseaux Tom
+ *  Copyright (c) 2015, 2016 François Michel, Clémentine Munyabarenzi
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
@@ -12,22 +12,15 @@
  *  You should have received a copy of the GNU Affero General Public License
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+
 package student;
 
-public class M2Q3Stu {
+public class M01Q07Stu {
 
-    // Soluce
-    public static int[] M2Q3(int diviseur, int dividende)
-    {
-        int reste = 0;
-        int quotient = 0;
-       
-        //<exercice>
-       
-        @    @q1@@
-       
-        //</exercice>
-        int[] res = {quotient, reste};
-        return res; 
-    }
+	// Code a verifier
+	public static int sumFirstEvenIntegers(int n){
+		int sum = 0;
+        @@q1@@
+		return sum;
+	}
 }
