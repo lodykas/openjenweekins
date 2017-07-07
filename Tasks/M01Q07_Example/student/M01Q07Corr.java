@@ -1,4 +1,4 @@
-/**
+﻿/**
  *  Copyright (c) 2015, 2016 François Michel, Clémentine Munyabarenzi
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published by
@@ -17,7 +17,7 @@ package student;
 
 public class M01Q07Stu {
 
-	// Code a verifier
+	// Code a vérifier
 	public static int sumFirstEvenIntegers(int n){
 		int sum = 0;
 		for(int i = 1 ; i <= n ; i++){
