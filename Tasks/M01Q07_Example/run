@@ -1,4 +1,4 @@
-#! /usr/bin/python3
+﻿#! /usr/bin/python3
 # -*- coding: utf-8 -*-
 
 #   Copyright (c) 2016 François Michel
@@ -60,8 +60,6 @@
 # "exercice" (string), qui contient l'identifiant de l'exercice. Cet identifiant doit se retrouver dans les noms de fichiers java comme indiqué ci-dessus.
 # "corr" (int), qui vaudra 0 lorsqu'il n'y a pas de fichier {exercice}Corr.java à compiler. (Attention, mettre CORR à une autre valeur que 0 alors qu'il n'y a pas de fichier {exercice}Corr.java provoquera une erreur de compilation.
 # "execcustom" (int), qui vaudra 0 lorsqu'il n'y a pas de script custom à exécuter et une autre valeur quand il faut en exécuter un.
-# "customscript" (string) qui indique le nom du fichier exécitable custom à exécuter. Il sera exécuté après le parsetemplate et avant la compilation des fichiers java.
-#  "nexercices" (int), qui indique le nombre d'exercices que comprend la tâche. Laisser à 1 s'il n'y a qu'un exercice dans la tâche (le cas idéal)
 
 
 import json
