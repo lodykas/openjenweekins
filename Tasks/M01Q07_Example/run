@@ -1,4 +1,4 @@
-#! /usr/bin/python3
+﻿#! /usr/bin/python3
 # -*- coding: utf-8 -*-
 
 #   Copyright (c) 2016 François Michel
@@ -74,7 +74,7 @@ from json import JSONDecodeError
 from inginious import feedback
 
 
-def add_indentation_level(to_indent):
+def  add_indentation_level(to_indent):
     return '    ' + '    '.join(to_indent.splitlines(keepends=True))
 
 
